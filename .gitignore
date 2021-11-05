@@ -1,0 +1,6 @@
+_build/
+_opam/
+dist/
+lib/*
+!lib/dune
+node_modules/

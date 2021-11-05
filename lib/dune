@@ -1,0 +1,10 @@
+(library
+ (name example)
+ (public_name example)
+ (libraries ts2ocaml-jsoo-stdlib ojs))
+
+(rule
+ (targets pretty_bytes.ml)
+ (deps pretty_bytes.mli)
+ (action
+  (run %{bin:gen_js_api} %{deps})))
