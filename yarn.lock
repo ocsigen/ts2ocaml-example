@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ocsigen/ts2ocaml@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ocsigen/ts2ocaml/-/ts2ocaml-0.0.3.tgz#336ee4140bd32894cae6cf3a21c9ed06e1debed4"
-  integrity sha512-4Ja3ACh2OqNFcMe4z7WlpFuLYNLERyGO8o9ND9Vn/PSPfvjkZh/9LNeQl6Zhc7ZG2RY2W6ZHr/3mO8VY1toMTA==
+"@ocsigen/ts2ocaml@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ocsigen/ts2ocaml/-/ts2ocaml-1.0.0.tgz#67e9502f7d015b73c3b4da33ee0142feccde619c"
+  integrity sha512-8PYFHbd3g0GiLxox8GgXeIjyXb5w1oYhzb9r0l2h4gAYvuALkT9IqocNGv+9sZC7MP2N8ziAHopLRMviyJkmUw==
   dependencies:
     typescript "^4.2.4"
     yargs "^17.0.1"
