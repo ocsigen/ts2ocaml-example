@@ -7,7 +7,7 @@
     "pretty-bytes": "5.6.0"
   },
   "devDependencies": {
-    "@ocsigen/ts2ocaml": "1.0.0",
-    "esbuild": "0.13.12"
+    "@ocsigen/ts2ocaml": "1.1.0",
+    "esbuild": "0.14.0"
   }
 }
