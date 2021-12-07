@@ -8,6 +8,6 @@
   },
   "devDependencies": {
     "@ocsigen/ts2ocaml": "1.1.0",
-    "esbuild": "0.14.0"
+    "esbuild": "0.14.2"
   }
 }
