@@ -1,6 +1,9 @@
+.PHONY: all
+all: clean bindings build
+
 .PHONY: pretty-bytes
 pretty-bytes:
-	yarn ts2ocaml jsoo node_modules/pretty-bytes/index.d.ts \
+	ts2ocaml jsoo node_modules/pretty-bytes/index.d.ts \
 		--preset=full \
 		--output-dir=lib \
 		--simplify \
@@ -13,7 +16,7 @@ bindings: pretty-bytes
 .PHONY: build
 build:
 	dune build @all --profile=release
-	yarn esbuild _build/default/bin/main.bc.js \
+	esbuild _build/default/bin/main.bc.js \
 		--bundle \
 		--minify \
 		--outfile=dist/index.js \
@@ -25,4 +28,6 @@ fmt:
 
 .PHONY: clean
 clean:
+	-rm -r dist/
+	-rm lib/*.{mli,js}
 	dune clean
