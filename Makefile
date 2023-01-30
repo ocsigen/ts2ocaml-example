@@ -20,7 +20,8 @@ build:
 		--bundle \
 		--minify \
 		--outfile=dist/index.js \
-		--platform=node
+		--platform=node \
+		--analyze
 
 .PHONY: fmt
 fmt:
