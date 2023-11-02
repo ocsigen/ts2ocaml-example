@@ -1,14 +1,7 @@
-/.pnp.*
-/.yarn/*
-!/.yarn/patches/
-!/.yarn/plugins/
-!/.yarn/releases/
-!/.yarn/sdks/
-!/.yarn/versions/
-
 /_build/
 /_opam/
 /.vscode/
+/.yarn/
 /dist/
 /node_modules/
 
