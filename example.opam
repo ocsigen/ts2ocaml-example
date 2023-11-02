@@ -8,11 +8,13 @@ license: "ISC"
 homepage: "https://github.com/ocsigen/ts2ocaml"
 bug-reports: "https://github.com/ocsigen/ts2ocaml/issues"
 depends: [
-  "dune" {>= "3.3"}
+  "dune" {>= "3.11"}
   "ts2ocaml-jsoo-stdlib"
   "ojs"
   "gen_js_api"
   "js_of_ocaml-compiler"
+  "ocamlformat" {= "0.26.1" & with-dev-setup}
+  "ocaml-lsp-server" {with-dev-setup}
   "odoc" {with-doc}
 ]
 build: [
@@ -31,5 +33,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/ocsigen/ts2ocaml.git"
 pin-depends: [
-  [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v1.4.4" ]
+  [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v1.4.6" ]
 ]

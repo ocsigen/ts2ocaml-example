@@ -4,9 +4,10 @@ all: clean bindings build
 .PHONY: pretty-bytes
 pretty-bytes:
 	ts2ocaml jsoo node_modules/pretty-bytes/index.d.ts \
-		--preset=full \
 		--output-dir=lib \
+		--preset=full \
 		--simplify \
+    --number-as-int \
 		--verbose \
 		--nowarn
 

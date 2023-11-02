@@ -9,15 +9,7 @@ on:
 
 jobs:
   build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os:
-          - macos-latest
-          - ubuntu-latest
-          - windows-latest
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -34,10 +26,11 @@ jobs:
         uses: ocaml/setup-ocaml@v2
         with:
           ocaml-compiler: "4.14"
+          allow-prelease-opam: true
 
       - run: yarn install --immutable
 
-      - run: opam install . --deps-only --with-test
+      - run: opam install . --deps-only
 
       - run: yarn exec -- opam exec -- make
 

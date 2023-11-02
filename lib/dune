@@ -1,7 +1,7 @@
 (library
  (name example)
  (public_name example)
- (libraries ts2ocaml-jsoo-stdlib ojs))
+ (libraries ts2ocaml-jsoo-stdlib))
 
 (rule
  (targets pretty_bytes.ml)

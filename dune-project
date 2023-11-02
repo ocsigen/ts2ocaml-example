@@ -1,4 +1,4 @@
-(lang dune 3.3)
+(lang dune 3.11)
 
 (name example)
 
@@ -17,4 +17,13 @@
  (name example)
  (synopsis "Example use of ts2ocaml")
  (description "Example use of ts2ocaml")
- (depends ts2ocaml-jsoo-stdlib ojs gen_js_api js_of_ocaml-compiler))
+ (depends
+  ts2ocaml-jsoo-stdlib
+  ojs
+  gen_js_api
+  js_of_ocaml-compiler
+  (ocamlformat
+   (and
+    (= 0.26.1)
+    :with-dev-setup))
+  (ocaml-lsp-server :with-dev-setup)))
