@@ -8,7 +8,7 @@ license: "ISC"
 homepage: "https://github.com/ocsigen/ts2ocaml"
 bug-reports: "https://github.com/ocsigen/ts2ocaml/issues"
 depends: [
-  "dune" {>= "3.11"}
+  "dune" {>= "3.12"}
   "ts2ocaml-jsoo-stdlib"
   "ojs"
   "gen_js_api"
