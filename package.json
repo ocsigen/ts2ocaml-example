@@ -10,5 +10,5 @@
     "@ocsigen/ts2ocaml": "1.4.6",
     "esbuild": "0.20.1"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.1.0"
 }
