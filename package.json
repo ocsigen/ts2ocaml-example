@@ -1,8 +1,9 @@
 {
   "name": "example",
-  "version": "0.0.0",
-  "license": "ISC",
   "private": true,
+  "license": "ISC",
+  "sideEffects": false,
+  "type": "commonjs",
   "dependencies": {
     "pretty-bytes": "5.6.0"
   },
