@@ -34,4 +34,4 @@ jobs:
 
       - run: yarn exec -- opam exec -- make
 
-      - run: node dist/index.js
+      - run: node dist/main.bc.js

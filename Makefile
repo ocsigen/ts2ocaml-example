@@ -7,7 +7,7 @@ pretty-bytes:
 		--output-dir=lib \
 		--preset=full \
 		--simplify \
-    --number-as-int \
+		--number-as-int \
 		--verbose \
 		--nowarn
 
@@ -17,12 +17,7 @@ bindings: pretty-bytes
 .PHONY: build
 build:
 	dune build @all --profile=release
-	esbuild _build/default/bin/main.bc.js \
-		--bundle \
-		--minify \
-		--outfile=dist/index.js \
-		--platform=node \
-		--analyze
+	tsup
 
 .PHONY: fmt
 fmt:
