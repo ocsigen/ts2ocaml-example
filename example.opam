@@ -33,5 +33,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/ocsigen/ts2ocaml.git"
 pin-depends: [
-  [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v2.0.0-beta.2" ]
+  [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v2.0.0-beta.3" ]
 ]
