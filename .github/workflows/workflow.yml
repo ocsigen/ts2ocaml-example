@@ -23,7 +23,7 @@ jobs:
       - run: corepack enable
 
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@v2
+        uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: ocaml-variants.5.1.1+options,ocaml-option-flambda
           allow-prerelease-opam: true
