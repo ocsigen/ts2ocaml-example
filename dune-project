@@ -1,4 +1,4 @@
-(lang dune 3.14)
+(lang dune 3.16)
 
 (name example)
 
@@ -9,7 +9,7 @@
 (maintainers "dev@ocsigen.org")
 
 (source
- (github ocsigen/ts2ocaml))
+ (github ocsigen/ts2ocaml-example))
 
 (generate_opam_files true)
 
@@ -22,8 +22,8 @@
   ojs
   gen_js_api
   js_of_ocaml-compiler
+  (ocaml-lsp-server :with-dev-setup)
   (ocamlformat
    (and
-    (= 0.26.1)
-    :with-dev-setup))
-  (ocaml-lsp-server :with-dev-setup)))
+    :with-dev-setup
+    (= 0.26.2)))))

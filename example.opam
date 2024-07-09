@@ -5,16 +5,16 @@ description: "Example use of ts2ocaml"
 maintainer: ["dev@ocsigen.org"]
 authors: ["The ocsigen team"]
 license: "ISC"
-homepage: "https://github.com/ocsigen/ts2ocaml"
-bug-reports: "https://github.com/ocsigen/ts2ocaml/issues"
+homepage: "https://github.com/ocsigen/ts2ocaml-example"
+bug-reports: "https://github.com/ocsigen/ts2ocaml-example/issues"
 depends: [
-  "dune" {>= "3.14"}
+  "dune" {>= "3.16"}
   "ts2ocaml-jsoo-stdlib"
   "ojs"
   "gen_js_api"
   "js_of_ocaml-compiler"
-  "ocamlformat" {= "0.26.1" & with-dev-setup}
   "ocaml-lsp-server" {with-dev-setup}
+  "ocamlformat" {with-dev-setup & = "0.26.2"}
   "odoc" {with-doc}
 ]
 build: [
@@ -31,7 +31,7 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/ocsigen/ts2ocaml.git"
+dev-repo: "git+https://github.com/ocsigen/ts2ocaml-example.git"
 pin-depends: [
   [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v2.0.0-beta.3" ]
 ]

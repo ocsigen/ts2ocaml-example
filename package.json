@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "@ocsigen/ts2ocaml-example",
   "private": true,
   "license": "ISC",
   "sideEffects": false,
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@ocsigen/ts2ocaml": "2.0.0-beta.3",
-    "tsup": "8.1.0"
+    "esbuild": "0.23.0"
   },
-  "packageManager": "yarn@4.2.2"
+  "packageManager": "yarn@4.3.1"
 }

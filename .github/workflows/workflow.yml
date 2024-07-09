@@ -1,4 +1,4 @@
-name: Main workflow
+name: Builds, tests & co
 
 on:
   pull_request:
@@ -10,28 +10,41 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout tree
         uses: actions/checkout@v4
-
       - name: Set-up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-
       - run: corepack enable
-
       - name: Set-up OCaml
         uses: ocaml/setup-ocaml@v3
         with:
-          ocaml-compiler: ocaml-variants.5.1.1+options,ocaml-option-flambda
-          allow-prerelease-opam: true
-
+          ocaml-compiler: "4.14"
       - run: yarn install --immutable
-
       - run: opam install . --deps-only
-
       - run: yarn exec -- opam exec -- make
-
       - run: node dist/main.bc.js
+
+  lint-fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tree
+        uses: actions/checkout@v4
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: "4.14"
+      - uses: ocaml/setup-ocaml/lint-fmt@v3
+
+  lint-opam:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tree
+        uses: actions/checkout@v4
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: "4.14"
+      - uses: ocaml/setup-ocaml/lint-opam@v3

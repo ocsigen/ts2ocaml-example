@@ -17,7 +17,12 @@ bindings: pretty-bytes
 .PHONY: build
 build:
 	dune build @all --profile=release
-	tsup
+	esbuild _build/default/bin/main.bc.js \
+		--bundle \
+		--minify \
+		--outdir=dist \
+		--platform=node \
+		--analyze
 
 .PHONY: fmt
 fmt:
