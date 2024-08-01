@@ -1,7 +1,6 @@
 /_build/
 /_opam/
 /.vscode/
-/.yarn/
 /dist/
 /node_modules/
 

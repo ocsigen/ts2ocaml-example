@@ -17,14 +17,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - run: corepack enable
       - name: Set-up OCaml
         uses: ocaml/setup-ocaml@v3
         with:
           ocaml-compiler: 4
-      - run: yarn install --immutable
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
       - run: opam install . --deps-only
-      - run: yarn exec -- opam exec -- make
+      - run: pnpm exec -- opam exec -- make
       - run: node dist/main.bc.js
 
   lint-fmt:
