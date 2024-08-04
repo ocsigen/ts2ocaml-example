@@ -22,9 +22,9 @@ jobs:
         with:
           ocaml-compiler: 4
       - run: corepack enable
-      - run: pnpm install --frozen-lockfile
+      - run: yarn install --immutable
       - run: opam install . --deps-only
-      - run: pnpm exec -- opam exec -- make
+      - run: make
       - run: node dist/main.bc.js
 
   lint-fmt:
