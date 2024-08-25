@@ -11,5 +11,5 @@
     "@ocsigen/ts2ocaml": "2.0.0-beta.3",
     "esbuild": "0.23.0"
   },
-  "packageManager": "yarn@4.4.0"
+  "packageManager": "yarn@4.4.1"
 }
