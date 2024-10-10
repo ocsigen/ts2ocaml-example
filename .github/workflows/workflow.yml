@@ -24,7 +24,7 @@ jobs:
       - run: corepack enable
       - run: yarn install --immutable
       - run: opam install . --deps-only
-      - run: make
+      - run: opam exec -- yarn exec -- make
       - run: node dist/main.bc.js
 
   lint-fmt:
