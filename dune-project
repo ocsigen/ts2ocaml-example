@@ -1,4 +1,4 @@
-(lang dune 3.16)
+(lang dune 3.17)
 
 (name example)
 
@@ -26,4 +26,4 @@
   (ocamlformat
    (and
     :with-dev-setup
-    (= 0.26.2)))))
+    (= 0.27.0)))))
