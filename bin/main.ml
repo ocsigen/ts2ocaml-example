@@ -8,9 +8,14 @@ module PrettyBytes = struct
 end
 
 let options =
-  PrettyBytes.Options.create ~signed:false
+  PrettyBytes.Options.create
+    ~signed:false
     ~locale:(Primitive.inject (`String "en"))
-    ~bits:false ~binary:false ~minimumFractionDigits:1 ~maximumFractionDigits:2
+    ~bits:false
+    ~binary:false
+    ~minimumFractionDigits:1
+    ~maximumFractionDigits:2
     ()
+;;
 
 let () = print_endline @@ PrettyBytes.pretty_bytes ~number:128000000 ~options ()
