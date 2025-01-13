@@ -3,9 +3,9 @@
 
 (generate_opam_files true)
 
-(license ISC)
 (maintainers "The ocsigen team <dev@ocsigen.org>")
 (authors "The ocsigen team <dev@ocsigen.org>")
+(license ISC)
 (source (github ocsigen/ts2ocaml-example))
 
 (package
@@ -13,6 +13,7 @@
  (synopsis "Example use of ts2ocaml")
  (description "Example use of ts2ocaml")
  (depends
+  (ocaml (< 5.0))
   ts2ocaml-jsoo-stdlib
   ojs
   gen_js_api

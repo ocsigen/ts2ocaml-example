@@ -9,6 +9,7 @@ homepage: "https://github.com/ocsigen/ts2ocaml-example"
 bug-reports: "https://github.com/ocsigen/ts2ocaml-example/issues"
 depends: [
   "dune" {>= "3.17"}
+  "ocaml" {< "5.0"}
   "ts2ocaml-jsoo-stdlib"
   "ojs"
   "gen_js_api"
@@ -33,5 +34,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/ocsigen/ts2ocaml-example.git"
 pin-depends: [
-  [ "ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v2.0.0-beta.3" ]
+  ["ts2ocaml-jsoo-stdlib.dev" "git+https://github.com/ocsigen/ts2ocaml.git#jsoo-stdlib-v2.0.0-beta.3"]
 ]
