@@ -2,7 +2,9 @@
 /_opam/
 /.vscode/
 /.yarn/
+/dev-tools.locks/
 /dist/
+/dune.lock/
 /node_modules/
 
 /lib/*
