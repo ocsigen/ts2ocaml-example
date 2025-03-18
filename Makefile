@@ -32,4 +32,3 @@ fmt:
 clean:
 	-rm -r dist/
 	-rm lib/*.{mli,js}
-	dune clean
