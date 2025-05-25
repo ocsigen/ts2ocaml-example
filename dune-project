@@ -1,4 +1,4 @@
-(lang dune 3.18)
+(lang dune 3.19)
 (name example)
 
 (generate_opam_files true)
