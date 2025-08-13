@@ -211,7 +211,7 @@ __metadata:
   dependencies:
     "@ocsigen/ts2ocaml": "npm:2.0.0-beta.3"
     esbuild: "npm:0.25.9"
-    pretty-bytes: "npm:5.6.0"
+    pretty-bytes: "npm:7.0.1"
   languageName: unknown
   linkType: soft
 
@@ -418,10 +418,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-bytes@npm:5.6.0":
-  version: 5.6.0
-  resolution: "pretty-bytes@npm:5.6.0"
-  checksum: 10c0/f69f494dcc1adda98dbe0e4a36d301e8be8ff99bfde7a637b2ee2820e7cb583b0fc0f3a63b0e3752c01501185a5cf38602c7be60da41bdf84ef5b70e89c370f3
+"pretty-bytes@npm:7.0.1":
+  version: 7.0.1
+  resolution: "pretty-bytes@npm:7.0.1"
+  checksum: 10c0/14ffb503d2de3588042c722848062a4897e6faece1694e0c83ba5669ec003d73311d946d50d2b3c6099a6a306760011b8446ee3cf9cf86eca13a454a8f1c47cb
   languageName: node
   linkType: hard
 
