@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@ocsigen/ts2ocaml": "2.0.0-beta.3",
-    "esbuild": "0.25.12"
+    "esbuild": "0.27.0"
   },
   "packageManager": "yarn@4.11.0"
 }
