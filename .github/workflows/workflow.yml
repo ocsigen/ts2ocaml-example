@@ -14,40 +14,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tree
-        uses: actions/checkout@v6
-      - name: Set-up Node.js
-        uses: actions/setup-node@v6
-        with:
-          check-latest: true
-          node-version-file: .nvmrc
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@v3
+        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
         with:
           ocaml-compiler: 4
-      - run: corepack enable
+      - name: Set-up Mise
+        uses: jdx/mise-action@d16887ba50704baed7de72bd1e82e04391e4457a # v3.5.0
+        with:
+          cache: false
+      - name: Load environment variables
+        run: |
+          direnv allow .
+          direnv export gha >"$GITHUB_ENV"
       - run: yarn install --immutable
       - run: opam install . --deps-only
-      - run: opam exec -- yarn exec -- make
+      - run: make
       - run: node dist/main.bc.js
 
   lint-fmt:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tree
-        uses: actions/checkout@v6
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@v3
+        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
         with:
           ocaml-compiler: 4
-      - uses: ocaml/setup-ocaml/lint-fmt@v3
+      - uses: ocaml/setup-ocaml/lint-fmt@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
 
   lint-opam:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout tree
-        uses: actions/checkout@v6
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@v3
+        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
         with:
           ocaml-compiler: 4
-      - uses: ocaml/setup-ocaml/lint-opam@v3
+      - uses: ocaml/setup-ocaml/lint-opam@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
