@@ -2,7 +2,7 @@ open Ts2ocaml_min
 
 module PrettyBytes = struct
   open Example
-  module Options = Pretty_bytes.Export.Options
+  module Options = Pretty_bytes.Export.Options.AnonymousInterface0
 
   let pretty_bytes = Pretty_bytes.prettyBytes
 end
@@ -13,9 +13,12 @@ let options =
     ~locale:(Primitive.inject (`String "en"))
     ~bits:false
     ~binary:false
-    ~minimumFractionDigits:1
-    ~maximumFractionDigits:2
+    ~minimumFractionDigits:1.
+    ~maximumFractionDigits:2.
     ()
 ;;
 
-let () = print_endline @@ PrettyBytes.pretty_bytes ~number:128000000 ~options ()
+let () =
+  print_endline
+  @@ PrettyBytes.pretty_bytes ~number:(Primitive.inject (`Number 128000000.)) ~options ()
+;;

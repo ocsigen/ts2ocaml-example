@@ -5,9 +5,7 @@ all: clean bindings build
 pretty-bytes:
 	ts2ocaml jsoo node_modules/pretty-bytes/index.d.ts \
 		--output-dir=lib \
-		--preset=full \
 		--simplify \
-		--number-as-int \
 		--verbose \
 		--nowarn
 
@@ -22,7 +20,8 @@ build:
 		--minify \
 		--outdir=dist \
 		--platform=node \
-		--analyze
+		--analyze \
+		--banner:js='globalThis["pretty-bytes"]={};'
 
 .PHONY: fmt
 fmt:
