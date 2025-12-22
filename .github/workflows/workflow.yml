@@ -16,7 +16,7 @@ jobs:
       - name: Checkout tree
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
+        uses: ocaml/setup-ocaml@dec6499fef64fc5d7ed43d43a87251b7b1c306f5 # v3.4.8
         with:
           ocaml-compiler: 4
       - name: Set-up Mise
@@ -38,10 +38,10 @@ jobs:
       - name: Checkout tree
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
+        uses: ocaml/setup-ocaml@dec6499fef64fc5d7ed43d43a87251b7b1c306f5 # v3.4.8
         with:
           ocaml-compiler: 4
-      - uses: ocaml/setup-ocaml/lint-fmt@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
+      - uses: ocaml/setup-ocaml/lint-fmt@dec6499fef64fc5d7ed43d43a87251b7b1c306f5 # v3.4.8
 
   lint-opam:
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
       - name: Checkout tree
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       - name: Set-up OCaml
-        uses: ocaml/setup-ocaml@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
+        uses: ocaml/setup-ocaml@dec6499fef64fc5d7ed43d43a87251b7b1c306f5 # v3.4.8
         with:
           ocaml-compiler: 4
-      - uses: ocaml/setup-ocaml/lint-opam@ddef532293b85980b315344506def8eb09917e2c # v3.4.6
+      - uses: ocaml/setup-ocaml/lint-opam@dec6499fef64fc5d7ed43d43a87251b7b1c306f5 # v3.4.8
