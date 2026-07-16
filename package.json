@@ -5,7 +5,7 @@
   "sideEffects": false,
   "type": "commonjs",
   "dependencies": {
-    "pretty-bytes": "7.1.0"
+    "pretty-bytes": "7.1.1"
   },
   "devDependencies": {
     "@ocsigen/ts2ocaml": "2.0.0-beta.3",
