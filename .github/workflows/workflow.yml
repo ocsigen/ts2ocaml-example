@@ -56,4 +56,4 @@ jobs:
         uses: ocaml/setup-ocaml@15d660006c1d3110d77c34b7faa3bddefe8b82f0 # v3.7.0
         with:
           ocaml-compiler: 4
-      - uses: ocaml/setup-ocaml/lint-opam@e32b06a3e831ff2fbc6f08cf35be2085e3918014 # v3.6.1
+      - uses: ocaml/setup-ocaml/lint-opam@15d660006c1d3110d77c34b7faa3bddefe8b82f0 # v3.7.0
