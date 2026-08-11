@@ -1,5 +1,5 @@
 [tools]
-direnv = "2"
-node = "25"
-opam = "2.5.0"
-yarn = "4"
+direnv = "latest"
+node = "26"
+"npm:corepack" = "latest"
+opam = "latest"
