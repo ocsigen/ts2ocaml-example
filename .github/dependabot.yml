@@ -4,6 +4,10 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      ocaml:
+        patterns:
+          - "ocaml/*"
   - package-ecosystem: npm
     directory: /
     schedule:
